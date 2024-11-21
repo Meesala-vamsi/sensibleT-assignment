@@ -138,7 +138,7 @@ const TransactionList = () => {
                 Edit
               </button>
             </li>
-            <hr className="md:block" />
+            <hr className="md:hidden" />
           </div>
         ))}
       </ul>
