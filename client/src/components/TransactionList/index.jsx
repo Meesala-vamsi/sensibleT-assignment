@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import {
+  fetchTransactionDetails,
   fetchTransactionsByUser,
   updateTransactionStatus,
 } from "../../store/TransactionSlice";
@@ -76,7 +77,12 @@ const TransactionList = () => {
   };
 
   const onClickEachTransaction = (id) => {
+    console.log(id)
     setOpenDetailspopup(true);
+    dispatch(fetchTransactionDetails(id))
+    .then((response)=>{
+      console.log(response);
+    })
   };
 
   return (
@@ -146,7 +152,6 @@ const TransactionList = () => {
       {openDetailspopup && (
         <TransactionDetails
           closeDetailsPopup={closeDetailsPopup}
-          transaction={transactionData}
         />
       )}
 

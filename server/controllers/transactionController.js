@@ -62,7 +62,6 @@ exports.fetchTransactionById = asyncHandler(async (req, res, next) => {
 
   res.status(200).json({
     status: "success",
-    message: "Transaction updated successfully.",
     data: {
       transaction:checkTransaction,
     },
