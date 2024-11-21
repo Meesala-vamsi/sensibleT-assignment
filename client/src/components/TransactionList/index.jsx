@@ -118,7 +118,7 @@ const TransactionList = () => {
             >
               {eachTransaction.status}
             </li>
-            <li className="py-2 text-center">
+            <li className="py-2 text-center flex justify-center">
               <button
                 className="text-lg hover:outline-none outline-none hidden md:block bg-gray-100"
                 onClick={(event) => {
@@ -128,7 +128,7 @@ const TransactionList = () => {
               >
                 <CiEdit />
               </button>
-              <button
+              {/* <button
                 className="bg-violet-200 w-full md:hidden"
                 onClick={(event) => {
                   openPopup(eachTransaction);
@@ -136,7 +136,7 @@ const TransactionList = () => {
                 }}
               >
                 Edit
-              </button>
+              </button> */}
             </li>
             <hr className="md:hidden" />
           </div>
